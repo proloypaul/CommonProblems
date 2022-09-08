@@ -9,7 +9,7 @@ function isPrime(num){
 
 console.log(isPrime(73));
 
-// get check prime number
+// // get check prime number
 
 const checkerPrimeNum = (isPrimeNum) => {
     for(let n = 2; n<isPrimeNum; n++){
@@ -37,3 +37,17 @@ if(!isPrimeNum){
     console.log(num, " isn't prime number");
 }
 
+// 1 t0 100 total prime number;
+for(let j=2; j<=100; j++){
+    let isPrimeNum = true;
+    for(i=2; i<j; i++){
+        // non prime number 
+        if(j%i==0){
+            isPrimeNum = false;
+            break;
+        }
+    }
+    if(isPrimeNum){
+        console.log(j);
+    }
+}

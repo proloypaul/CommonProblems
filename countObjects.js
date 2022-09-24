@@ -1,3 +1,4 @@
+// hackerrank problem count object day 4
 const objects = [
     {"x": 1, "y": 1},
     {"x": 2, "y": 3},
@@ -20,3 +21,8 @@ function getCount(objects){
 };
 
 console.log(getCount(objects));
+
+const firstVar = "I am going to be";
+const secondVar = "an awesome web developer";
+const combineTwoVar = `'${firstVar}' and '${secondVar}'`; 
+console.log(combineTwoVar);

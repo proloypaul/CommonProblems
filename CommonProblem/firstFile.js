@@ -80,12 +80,29 @@ print the largest number using if-else.
 const firstNum = 13;
 const secondNum = 79;
 const thirdNum = 45;
-if(secondNum<firstNum && firstNum>thirdNum){
-    console.log("largest Number: " + firstNum);
-}else if(secondNum>firstNum && secondNum>thirdNum){
-    console.log("largest Number: " + secondNum);
-}else{
-    console.log("largest Number: " + thirdNum);
+const largestNumFuc = (firstNum, secondNum, thirdNum) => {
+    if(secondNum<firstNum && firstNum>thirdNum){
+        return ("largest Number: " + firstNum);
+    }else if(secondNum>firstNum && secondNum>thirdNum){
+        return ("largest Number: " + secondNum);
+    }else{
+        return ("largest Number: " + thirdNum);
+    }
 }
+// console.log(largestNumFuc(firstNum, secondNum, thirdNum));
 
+// Question 
+/* 
+একটা ক োড লি খে ৪১২ থে কে ৪৫৬ পর্যন্ত যত জ োর সংখ্যা আছে সে গুলাকে
+দে খাও
+*/
 
+// solve
+const evenNum = () => {
+    for(let i=412; i<=456; i++){
+        if(i%2 == 0){
+            console.log(i);
+        }
+    }
+}
+// evenNum();

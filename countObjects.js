@@ -21,8 +21,3 @@ function getCount(objects){
 };
 
 console.log(getCount(objects));
-
-const firstVar = "I am going to be";
-const secondVar = "an awesome web developer";
-const combineTwoVar = `'${firstVar}' and '${secondVar}'`; 
-console.log(combineTwoVar);

@@ -22,3 +22,39 @@ class Polygon{
 const result = new Polygon([3, 4, 3]);
 // console.log(result);
 console.log(result.perimeter())
+
+// another problem inheritance of hackerrank
+class Rectanguler{
+    width;
+    height;
+    constructor(width, height){
+        this.width = width;
+        this.height = height;
+    }
+}
+
+
+class Square extends Rectanguler{
+    // area(){
+    //     const a = this.width;
+    //     const areaOfSquare = a * a;
+    //     return areaOfSquare;
+    // }
+}
+
+Rectanguler.prototype.area = function(){
+    const widthOfRectanguler = this.width;
+    const heightOfRectanguler = this.height;
+    let areaOfBoth;
+    if(isNaN(heightOfRectanguler)){
+        areaOfBoth = widthOfRectanguler*widthOfRectanguler;
+    }else{
+        areaOfBoth = widthOfRectanguler*heightOfRectanguler;
+    }
+    return areaOfBoth;
+}
+const rec = new Rectanguler(4, 3);
+const squ = new Square(2);
+console.log(rec.area());
+console.log(squ.area())
+

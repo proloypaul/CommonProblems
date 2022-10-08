@@ -23,7 +23,7 @@ const result = new Polygon([3, 4, 3]);
 // console.log(result);
 console.log(result.perimeter())
 
-// another problem inheritance of hackerrank
+// problem inheritance of hackerrank
 class Rectanguler{
     width;
     height;
@@ -58,3 +58,26 @@ const squ = new Square(2);
 console.log(rec.area());
 console.log(squ.area())
 
+// another way to solved this problem
+// class Rectanguler{
+//     w;
+//     h;
+//     constructor(w, h){
+//         this.w = w;
+//         this.h = h;
+//     }
+// }
+// // added a method on Rectanguler class
+// Rectanguler.prototype.area = function(){
+//     return areaOfBoth = this.w*this.h;
+// }
+// class Square extends Rectanguler{
+//     constructor(h){
+//         super(h, h);
+//     }
+    
+// }
+// const rec = new Rectanguler(3, 4);
+// const squ = new Square(3);
+// console.log(rec.area()) 
+// console.log(squ.area())

@@ -17,6 +17,7 @@ function getMaxLessThank(n, k){
 }
 console.log(getMaxLessThank(n, k));
 
+// another way solved this problems
 const getMaxLessThankTwo = (n, k) => {
     let maxNum = 0;
     for(let i=1; i<=n; i++){

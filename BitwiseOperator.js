@@ -16,3 +16,18 @@ function getMaxLessThank(n, k){
     return Math.max(...bitResultArr);
 }
 console.log(getMaxLessThank(n, k));
+
+const getMaxLessThankTwo = (n, k) => {
+    let maxNum = 0;
+    for(let i=1; i<=n; i++){
+        for(let j=i+1; j<=n; j++){
+            const bitResultTwo = i&j;
+            if(bitResultTwo<k && bitResultTwo>maxNum){
+                maxNum = bitResultTwo;
+            }
+        }
+    }
+    return maxNum;
+}
+
+console.log(getMaxLessThankTwo(n, k));

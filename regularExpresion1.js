@@ -51,6 +51,8 @@ console.log(resultThree.test(s));
             // 2. () this use for grouping 
             // 3. [] set any letter a-z or number 0-9 in this operator
             // 4. . matches any charecter/ch
-            // 5. 1 matches if existed
-            // 6. $/ this operator select end letter from string 
-            // 7. i for incasesensative that means A or a letter same meanning  
+            // 5. * modifier means match 0 or more times such as /bo*/ it will be booooo
+            // 6. 1 matches if existed
+            // 7. $/ this operator select end letter from string 
+            // 8. i for incasesensative that means A or a letter same meanning  
+            // 9. + modifier means match 1 or more times such as /a+/ it will becaaaandy

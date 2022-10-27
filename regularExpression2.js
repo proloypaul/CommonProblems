@@ -15,3 +15,6 @@ console.log(!!s.match(result)); // this is collected from hackerrank hidden code
 /^(Mr|Mrs|Ms|Dr|Er)[\.][a-zA-Z]*$/ // this condion has one problem such as when you enter Mr. it will be true but we want Mr.Dfsdfsd then it has to true
 
 */
+
+//  document of Reguler Experience
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet

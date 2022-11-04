@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buttonContainer.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="btns">
+        <button id="btn1">1</button>
+        <button id="btn2">2</button>
+        <button id="btn3">3</button>
+        <button id="btn4">4</button>
+        <button id="btn5">5</button>
+        <button id="btn6">6</button>
+        <button id="btn7">7</button>
+        <button id="btn8">8</button>
+        <button id="btn9">9</button>
+    </div>
+
+    <script>
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        const btn3 = document.getElementById('btn3');
+        const btn4 = document.getElementById('btn4');
+        const btn5 = document.getElementById('btn5');
+        const btn6 = document.getElementById('btn6');
+        const btn7 = document.getElementById('btn7');
+        const btn8 = document.getElementById('btn8');
+        const btn9 = document.getElementById('btn9');
+
+
+        
+        let btn1Num = parseInt(btn1.innerText);
+        let btn2Num = parseInt(btn2.innerText);
+        let btn3Num = parseInt(btn3.innerText);
+        let btn4Num = parseInt(btn4.innerText);
+        let btn5Num = parseInt(btn5.innerText);
+        let btn6Num = parseInt(btn6.innerText);
+        let btn7Num = parseInt(btn7.innerText);
+        let btn8Num = parseInt(btn8.innerText);
+        let btn9Num = parseInt(btn9.innerText);
+        console.log("what is this type " + typeof(btn1Num) + btn1Num);
+        btn5.addEventListener("click", handlebtn5);
+        function handlebtn5(){
+            // console.log(btn1Num);
+            btn3Num = btn2Num;
+            btn2Num = btn1Num;
+
+            btn1Num = btn4Num;
+            btn4Num = btn7Num;
+
+            btn7Num = btn8Num;
+            btn8Num = btn9Num;
+
+            btn9Num = btn6Num;
+            btn6Num = parseInt(btn3.innerText);
+            
+            // set all btn number
+            btn2.innerText = btn2Num;
+            btn3.innerText = btn3Num;
+            btn6.innerText = btn6Num;
+            btn9.innerText = btn9Num;
+            btn8.innerText = btn8Num;
+            btn7.innerText = btn7Num;
+            btn4.innerText = btn4Num;
+            btn1.innerText = btn1Num;
+            
+            // console.log(btn1Num)
+
+        }
+        // console.log(btn1Num)
+    </script>
+</body>
+</html>

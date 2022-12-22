@@ -34,7 +34,13 @@
         const btnMul = document.getElementById("btnMul");
         const btnDiv = document.getElementById("btnDiv");
 
-        
+        // finding shortcurt way 
+    //    const allVariable = [btn0, btn1, btnEql, btnSum, btnSub, btnMul, btnDiv];
+    //    let resultAllValue = ""; 
+    //    for(let i=0; i<allVariable.length; i++){
+    //     allVariable[i].addEventListener("click", handleAllVariable(i));
+    //    }
+
         btn0.addEventListener("click", handleBtn0);
         btn1.addEventListener("click", handleBtn1);
         btnEql.addEventListener("click", handleBtnEql);
@@ -44,9 +50,13 @@
         btnDiv.addEventListener("click", handleDiv);
         btnClr.addEventListener("click", handleBtnClr);
 
+        // function handleAllVariable(i){
+        //     resultAllValue = resultAllValue + allVariable[i].innerText;
+        //     res.innerText = resultAllValue;
+        // }
 
         let resultAllValue = "";
-
+        
         function handleBtn0(){
             resultAllValue = resultAllValue + btn0.innerText;
             res.innerText = resultAllValue;
@@ -89,9 +99,25 @@
                     // console.log(operators[i] + " " + typeof(operators[i]));
                     const resultFirstValue = resultAllValue.slice(0, resultAllValue.indexOf(operators[i]));
                     const resultSecondValue = resultAllValue.slice(resultAllValue.indexOf(operators[i])+1, resultAllValue.length);
-                    console.log(resultFirstValue);
-                    console.log(resultSecondValue);
+                    // convert Binary to decimal
+                    const firstValueBin2Dec = parseInt(resultFirstValue, 2);
+                    const secondValueBin2Dec = parseInt(resultSecondValue, 2);
+                    console.log(resultFirstValue + " " + firstValueBin2Dec);
+                    console.log(resultSecondValue + " " + secondValueBin2Dec);
+                    let calculatedValue;
+                    if(resultAllValue.indexOf("+") !== -1){
+                        calculatedValue = firstValueBin2Dec + secondValueBin2Dec;
+                    }else if(resultAllValue.indexOf("-") !== -1){
+                        calculatedValue = firstValueBin2Dec - secondValueBin2Dec;
+                    }else if(resultAllValue.indexOf("*") !== -1){
+                        calculatedValue = firstValueBin2Dec * secondValueBin2Dec;
+                    }else if(resultAllValue.indexOf("/") !== -1){
+                        calculatedValue = firstValueBin2Dec / secondValueBin2Dec;
+                    }
+                    
+                    res.innerText = calculatedValue.toString(2);
                 }
+                
             } 
             // console.log(resultAllValue);
         }
